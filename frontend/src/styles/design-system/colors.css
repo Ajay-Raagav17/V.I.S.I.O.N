@@ -1,0 +1,63 @@
+/* VISION Design System - Color Utilities
+ * Implements color utility classes for brand, text, and background colors.
+ * Requirements: 7.1, 7.2, 7.3, 7.4
+ */
+
+/* Brand Color - Text - Requirement 7.1 */
+.color-brand {
+  color: var(--color-brand);
+}
+
+/* Brand Color - Background - Requirement 7.2 */
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+/* Brand Color - Hover Background */
+.bg-brand-hover:hover {
+  background-color: var(--color-brand-hover);
+}
+
+/* Brand Color - Light Background */
+.bg-brand-light {
+  background-color: var(--color-brand-light);
+}
+
+/* Muted Text Color - Requirement 7.4 */
+.color-muted {
+  color: var(--color-text-muted);
+}
+
+/* Primary Text Color */
+.color-primary {
+  color: var(--color-text-primary);
+}
+
+/* Secondary Text Color */
+.color-secondary {
+  color: var(--color-text-secondary);
+}
+
+/* White Text Color */
+.color-white {
+  color: var(--color-white);
+}
+
+/* White Background */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* Focus/Active States - Requirement 7.3 */
+.focus-brand:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.border-brand {
+  border-color: var(--color-brand);
+}
+
+.border-brand-focus:focus {
+  border-color: var(--color-brand);
+}

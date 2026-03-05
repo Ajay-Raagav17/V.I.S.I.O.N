@@ -1,0 +1,112 @@
+/* VISION Design System - Button Styles
+ * Implements button component styles with brand colors and consistent sizing.
+ * Requirements: 7.2, 8.3, 12.4
+ */
+
+/* Base Button Styles */
+.btn {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+/* Primary Button - Requirement 7.2, 8.3, 12.4 */
+.btn-primary {
+  height: var(--button-height);
+  min-height: 44px;
+  padding: 0 var(--spacing-lg);
+  background-color: var(--color-brand);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-brand-hover);
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  height: var(--button-height);
+  min-height: 44px;
+  padding: 0 var(--spacing-lg);
+  background-color: transparent;
+  color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-brand-light);
+}
+
+.btn-secondary:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Ghost Button */
+.btn-ghost {
+  height: var(--button-height);
+  min-height: 44px;
+  padding: 0 var(--spacing-lg);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand);
+}
+
+/* Small Button Variant */
+.btn-sm {
+  height: 36px;
+  min-height: 36px;
+  padding: 0 var(--spacing-md);
+  font-size: 12px;
+}
+
+/* Large Button Variant */
+.btn-lg {
+  height: 52px;
+  min-height: 52px;
+  padding: 0 var(--spacing-xl);
+  font-size: 16px;
+}
+
+/* Full Width Button */
+.btn-full {
+  width: 100%;
+}

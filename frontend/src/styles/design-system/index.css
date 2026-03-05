@@ -1,0 +1,39 @@
+/* VISION Design System - Main Entry Point
+ * Imports all design system CSS files.
+ * Requirement: 1.1
+ */
+
+/* CSS Custom Properties (must be first) */
+@import './variables.css';
+
+/* Typography Classes */
+@import './typography.css';
+
+/* Color Utilities */
+@import './colors.css';
+
+/* Spacing Utilities */
+@import './spacing.css';
+
+/* Button Styles - Requirements 7.2, 8.3, 12.4 */
+@import './buttons.css';
+
+/* Input Styles - Requirements 8.2, 12.3 */
+@import './inputs.css';
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+  color: var(--text-body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

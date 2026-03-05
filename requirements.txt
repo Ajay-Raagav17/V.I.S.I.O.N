@@ -1,0 +1,24 @@
+fastapi==0.108.0
+uvicorn[standard]==0.25.0
+python-multipart==0.0.6
+pydantic==2.5.3
+sqlalchemy==2.0.23
+alembic==1.13.1
+psycopg2-binary==2.9.9
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+requests==2.31.0
+# AssemblyAI uses REST API - no SDK needed, just requests
+# Gemini AI for notes generation
+google-generativeai==0.3.2
+# PDF generation
+reportlab==4.0.7
+weasyprint==60.2
+PyPDF2==3.0.1
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.23.2
+hypothesis==6.92.2
+httpx==0.26.0
+websockets==12.0

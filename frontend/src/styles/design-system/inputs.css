@@ -1,0 +1,140 @@
+/* VISION Design System - Input Field Styles
+ * Implements input component styles with consistent sizing and typography.
+ * Requirements: 8.2, 12.3
+ */
+
+/* Input Label - Requirement 8.2 */
+.input-label {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Base Input Field - Requirement 12.3 */
+.input-field {
+  width: 100%;
+  height: var(--input-height);
+  min-height: 40px;
+  max-height: 44px;
+  padding: 0 var(--spacing-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  border: 1px solid #E5E7EB;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.input-field::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input-field:hover:not(:disabled) {
+  border-color: #D1D5DB;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px var(--color-brand-light);
+}
+
+.input-field:disabled {
+  background-color: #F9FAFB;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Input with Icon */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .input-field {
+  padding-left: 44px;
+}
+
+.input-icon-left {
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-icon-left svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Input Error State */
+.input-field.input-error {
+  border-color: #EF4444;
+}
+
+.input-field.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Input Success State */
+.input-field.input-success {
+  border-color: #10B981;
+}
+
+.input-field.input-success:focus {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/* Error Message */
+.input-error-message {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 400;
+  color: #EF4444;
+  margin-top: var(--spacing-xs);
+}
+
+/* Textarea */
+.textarea-field {
+  width: 100%;
+  min-height: 100px;
+  padding: var(--spacing-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  border: 1px solid #E5E7EB;
+  border-radius: var(--radius-md);
+  resize: vertical;
+  transition: all var(--transition-fast);
+}
+
+.textarea-field::placeholder {
+  color: var(--color-text-muted);
+}
+
+.textarea-field:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px var(--color-brand-light);
+}
