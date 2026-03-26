@@ -65,7 +65,7 @@ def test_initialization_configures_api(mock_genai):
     mock_genai.configure.assert_called_once_with(api_key='test_key_123')
     
     # Verify model was initialized
-    mock_genai.GenerativeModel.assert_called_once_with('gemini-pro')
+    mock_genai.GenerativeModel.assert_called_once_with('gemini-1.5-flash')
     
     # Cleanup
     os.environ.pop('GEMINI_API_KEY', None)

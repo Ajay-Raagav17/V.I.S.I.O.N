@@ -16,8 +16,7 @@ import './styles/upload.css';
  */
 const LiveCaptionPage = () => {
   const handleSessionComplete = (result) => {
-    console.log('Session completed:', result);
-    // In future, navigate to notes view or show completion message
+    // Navigate to notes view or show completion message
   };
 
   return (

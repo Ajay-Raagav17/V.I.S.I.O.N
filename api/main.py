@@ -27,13 +27,22 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configure CORS
+# Configure CORS - include Vercel deployment URLs
+import os as _os
+_frontend_url = _os.getenv("FRONTEND_URL", "http://localhost:5173")
+_allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    _frontend_url,
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_origin_regex=r"https://.*\.vercel\.app",  # Allow all Vercel preview deploys
 )
 
 # Add error handling middleware
